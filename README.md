@@ -14,7 +14,8 @@
 ###     - Sorting / Recursive
 ###     - String
 
-
+```
 ### compile
 ####    -> gcc *.c  
 ####    -> a.exe
+```
