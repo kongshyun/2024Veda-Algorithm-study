@@ -4,7 +4,7 @@
 #### Start date : 24.07.31 /  member : 5
 
 
-### 개발환경 : VScode (gcc comfile )/ text editor
+### 개발환경 : VScode (C or text editor )
 <!-- line -->
 ### :file_folder: 1 Session
 #### * Queue
