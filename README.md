@@ -15,3 +15,6 @@
 ###     - String
 
 
+### compile
+####    -> gcc *.c  
+####    -> a.exe
