@@ -7,7 +7,7 @@
 
 ### 개발환경 : VScode (gcc comfile )/ text editor
 
-### :file_folder: 1 Session(6 times)
+### :file_folder: 1 Session
 #### >> - Queue
 #### >> - Stack / Linked list
 #### >> - Hash Table / Map
