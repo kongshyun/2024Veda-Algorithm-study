@@ -7,12 +7,12 @@
 
 ### 개발환경 : VScode (gcc comfile )/ text editor
 
-### 1 Session(6 times)
-###     - Queue
-###     - Stack / Linked list
-###     - Hash Table / Map
-###     - Sorting / Recursive
-###     - String
+### :file_folder 1 Session(6 times)
+#### >> - Queue
+#### >> - Stack / Linked list
+#### >> - Hash Table / Map
+#### >> - Sorting / Recursive
+#### >> - String
 
 ```
 ### compile
