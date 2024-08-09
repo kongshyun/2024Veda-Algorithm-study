@@ -28,20 +28,13 @@ int is_empty(void);
 int is_full(void);
 int pop(void);
 
-/*  값을 끝에서부터 하나씩 넣어줌 / 가득 찬 상태이면 한칸씩 앞으로 밀고 제일 끝에 다시 넣어줌. */
 void push(int value)
 {
     if(is_full()==TRUE){
         printf("FULL.\n");
-        for(int i=MAX_NUMS-1;i>0;i--){
-            s_nums[i-1]=s_nums[i]; 
-            //한칸씩 앞으로 값을 넘긴다.  s[10]값이 s[9]로, s[9]값이 s[8]로,,,
-            //앞으로 한칸씩 밀어서 s_nums[MAX-1]자리를 비워준다.
-        }
-        s_nums[MAX_NUMS -1] = value; // s[MAX] 비었으므로 value 값을 넣어준다.
-    }else{
-        s_nums[s_num_count++] = value; //빈공간의 끝에서부터 value값을 push한다.
-    }    
+        return;
+    }
+    s_nums[s_num_count++]=value; //value 값을 빈 곳의 끝부터 하나씩 넣는다.
 }
 
 int is_empty(void)
@@ -59,7 +52,8 @@ int pop(void){
         printf("EMPTY.\n");
         return -1;
     }
-    return s_nums[s_num_count--]; // 끝에서부터 값을 하나씩 꺼낸다.
+     // 끝에서부터 값을 하나씩 꺼낸다.
+    return s_nums[--s_num_count];
 }
 
 
@@ -86,7 +80,7 @@ void test1(void)
     push(60);
     push(70);
     push(80);
-
+    //printf("push80 : %d, s_num_count : %d\n",s_nums[s_num_count-1],s_num_count-1); // 확인코드. 80,7
     assert(pop() == 80);
     assert(s_num_count == 7);
 }
@@ -124,6 +118,7 @@ void test3(void)
     pop();
     pop();
     pop();
+    //printf("pop now : %d\n",pop()); // 확인
     pop();
     pop();
     pop();

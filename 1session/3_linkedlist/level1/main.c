@@ -1,7 +1,14 @@
+/*
+
+[목적]
+    - 이론적 효율성을 고려한, 구현
+        - 연결리스트를 이용했을때의 연산(검색, 삽입, 삭제) 효율성 이해하고, 적어오기
+--------------------------------------------------------------------------------
+
+*/
+
 #include "linked_list.h"
 #include <assert.h>
-
-
 
 int main(void)
 {
@@ -31,11 +38,17 @@ int main(void)
     assert(add(&head, node2) == TRUE);
     assert(add(&head, node3) == TRUE);
     assert(add(&head, node4) == TRUE);
-    assert(add(&head, node5) == FALSE);
+    assert(add(&head, node5) == TRUE);
 
     node_t* node = get_node_or_null(head, 20);;
     assert(node->id == 3);
     assert(node->value == 20);
+
+
+    node_t* node = get_node_or_null(head, 20);;
+    assert(node->id == 5);
+    assert(node->value == 5);
+
 
     assert(remove(&head, 20) == TRUE);
     assert(remove(&head, 20) == FALSE);

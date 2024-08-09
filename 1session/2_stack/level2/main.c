@@ -15,6 +15,7 @@ stack level2
 #include "stack.h"
 #include <stdio.h>
 #include <assert.h>
+
 void test1(void) {
     _initial_stack();
 
