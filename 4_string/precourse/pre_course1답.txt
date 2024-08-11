@@ -1,0 +1,12 @@
+# PRE_COURSE 1
+
+- 📝 strlen, strcpy, strcmp, memcpy, memset, memcmp 함수들의 사용법을 익혀옵시다
+    - string.h 파일에는 많은 함수가 존재합니다
+        
+        - https://modoocode.com/76
+        - 그 중 가장 많이 사용하는 함수들이 이번 실습의 타겟들 입니다
+
+        
+- 📝 size_t 라는 typedef된 타입을 자주 접하게 되는데, 무엇인지 알아옵시다.
+ (어떤 헤더파일에 정의되어있는지도 찾아보세요)
+     : stddef.h, stdio.h, stdlib.h 중 하나
