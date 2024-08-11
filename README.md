@@ -15,6 +15,7 @@
 
 ```
 Compile
-####    -> gcc *.c  
+####    -> gcc *.c
+gcc -std=c11 -Wall -pedantic-errors *.c   
 ####    -> a.exe
 ```
