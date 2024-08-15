@@ -7,6 +7,8 @@ int main()
     int* p = nums; /* 변수 nums의 주소는 0x104라 가정 */
     int num = *p++;
     printf("num : %d\n p : %d",num,p);
+
+    return 0;
 }
 
 
