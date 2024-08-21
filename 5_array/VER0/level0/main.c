@@ -18,14 +18,14 @@ int main(void)
     assert(index_of(&arr, h2) == NODE_NOT_FOUND);
 
     /* Insert at 기능 테스트 */ 
-    assert(insert_at(&arr, h2, 0) == 0);
+    assert(insert_at(&arr, h2, 0) == 1);
     assert(arr.count == 2);
     assert(arr.humans[0].age == 30);
     assert(arr.humans[1].age == 20);
 
-    assert(insert_at(&arr, h3, 1) == 0);
+    assert(insert_at(&arr, h3, 0) == 1);
     assert(arr.count == 3);
-    assert(arr.humans[1].age == 40);
+    assert(arr.humans[0].age == 40);
     assert(arr.humans[2].age == 20);
 
     /* Remove at 기능 테스트 */

@@ -29,68 +29,24 @@ int index_of(humans_arr_t* arr, human_t human){
 
 //index 위치에 human 삽입
 int insert_at(humans_arr_t* arr, human_t human, int index){
+
     if(arr->humans[index].age !=0){
-        return 0;
+        for(int i=arr->count;i>=index;i--){
+            arr->humans[i+1]=arr->humans[i];
+        }
+        arr->count++; // 한번씩 뒤로 밀었으니까 count도 1 증가
+        arr->humans[index]=human;
+        return TRUE;
     }
-    for(int i=0; i<arr->count;i++){
-        
+    else{
+        arr->humans[index]=human;
+        return TRUE;// 
     }
-    arr->humans[index]=human;
-    arr -> count++;
-    return TRUE;
+
+    return FALSE;
+    
 }
 
 int remove_at(humans_arr_t* arr, int index){
     
 }
-
-/*
-#include <stdio.h>
-#include "array.h"
-#include "human.h"
-
-// 배열의 맨 마지막에 삽입
-int append(humans_arr_t* arr, human_t human) {
-    if (arr->count >= ARR_NUMS) {
-        return FALSE;  // 배열이 가득 찼으면 FALSE 리턴
-    }
-    arr->humans[arr->count] = human;
-    arr->count++;
-    return TRUE;
-}
-
-// 특정 human이 배열의 어느 위치에 있는지 찾기 (인덱스 리턴)
-int index_of(humans_arr_t* arr, human_t human) {
-    for (int i = 0; i < arr->count; i++) {
-        if (arr->humans[i].age == human.age) {
-            return i;
-        }
-    }
-    return NODE_NOT_FOUND;
-}
-
-// 특정 위치에 human 삽입
-int insert_at(humans_arr_t* arr, human_t human, int index) {
-    if (index < 0 || index > arr->count || arr->count >= ARR_NUMS) {
-        return FALSE;  // 인덱스가 잘못됐거나 배열이 가득 찼으면 FALSE 리턴
-    }
-    for (int i = arr->count; i > index; i--) {
-        arr->humans[i] = arr->humans[i - 1];
-    }
-    arr->humans[index] = human;
-    arr->count++;
-    return TRUE;
-}
-
-// 특정 위치에서 human 제거
-int remove_at(humans_arr_t* arr, int index) {
-    if (index < 0 || index >= arr->count) {
-        return FALSE;  // 인덱스가 잘못됐으면 FALSE 리턴
-    }
-    for (int i = index; i < arr->count - 1; i++) {
-        arr->humans[i] = arr->humans[i + 1];
-    }
-    arr->count--;
-    return TRUE;
-}
-*/
